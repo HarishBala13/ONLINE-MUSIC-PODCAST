@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizantal-Navigation-Drop-Down</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="horizantal nav with drop-down.css">
+<link rel="stylesheet" href="LoginPage.css">
+<script src="home.js"></script>
+</head>
+<body>
+<header class="header">
+<div class="nav">
+    <img src="image/logo.png" class="logo">
+</div>
+<a href="#" class="toggle-button">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</a>
+<div class="nav-links">
+<ul>
+    <li><a href="#" onclick="home()"><i class="fa fa-fw fa-home"></i>Home</a></li>
+    <li><a href="SearchPage.html"><i class="fa fa-fw fa-search"></i>Search</a></li>
+    <li><a href="#"><div class="popup" onclick="myFunction()">View Profile<span class="popuptext" id="myPopup"><img src="image/person.png" style="width: 120px; height: 100px;"></span></div></a></li>
+    <li><a href="PremiumPage.html">Premium</a></li>
+    <li><a href="#bottom"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="nav-links login-button">
+        <li><a href="#" onclick="onclickeventlogin(); return true;"><i class="fa fa-fw fa-user"></i>Login</a></li>
+<div id="id01" class="modal">
+      <form class="modal-content animate">
+        <div class="imgcontainer">
+          <span onclick="onclickeventclose()" class="close" title="Close Modal">&times;</span>
+          <img src="image/person.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <label>
+            <input type="checkbox" name="remember"> Remember me
+          </label><br><br>
+          <button id="loginbtn" type="submit">Login</button>
+          <a href="HarishSignUp.html">Create an account</a>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div> 
+      </form>
+    </div>
+      
+</div>
+</header>
+<script>
+// Get the modal
+var modal = document.getElementById('id01'); 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event){
+    if (event.target == modal){
+        modal.style.display = "none";
+    }
+}
+function onclickeventclose(){
+    document.getElementById('id01').style.display='none';
+}
+function onclickeventlogin(){
+    document.getElementById('id01').style.display='block';
+}
+</script>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('nav-links')[0]
+    toggleButton.addEventListener('click' ,() =>{
+    navbarLinks.classList.toggle('active')
+})
+</script>
+
+
+<!--Image Slider Starts Here..-->
+<div class="slider-body">
+<div class="slider">
+    <div class="slides">
+        <input type="radio" id="radio1" name="fun">
+        <input type="radio" id="radio2" name="fun">
+        <input type="radio" id="radio3" name="fun">
+        <input type="radio" id="radio4" name="fun">
+        <input type="radio" id="radio5" name="fun">
+
+        <div class="slide first">
+            <img src="image/imageslider/pexels-wendy-wei-1699161.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/imageslider/pexels-vishnu-r-nair-1105666.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/imageslider/pexels-jacob-morch-426976.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/imageslider/pexels-wendy-wei-1916818.jpg">
+        </div>
+        <div class="slide">
+            <img src="image/imageslider/pexels-tirachard-kumtanom-1001850.jpg">
+        </div>
+
+        <div class="auto">
+            <div class="auto1"></div>
+            <div class="auto2"></div>
+            <div class="auto3"></div>
+            <div class="auto4"></div>
+            <div class="auto5"></div>
+        </div>
+    </div>
+
+    <div class="manual">
+        <label for="radio1" class="manuals"></label>
+        <label for="radio2" class="manuals"></label>
+        <label for="radio3" class="manuals"></label>
+        <label for="radio4" class="manuals"></label>
+        <label for="radio5" class="manuals"></label>
+    </div>
+    </div>
+    </div>
+    <script>
+         var counter = 1;
+    setInterval(function(){
+        documnet.getElementById('fun' + counter).checked = true;
+        counter = counter + 1;
+
+        if(counter>5){
+            counter = 1;
+        }
+    },3000);
+    </script>
+
+
+<section id="bottom">
+    <div class="contact-header">
+       <a href="#top"><div class="grid1"><img src="image/logo.png" class="logo"></div></a>
+    <div class="grid2">
+        <span>COMPANY</span>
+        <ul>
+            <li>About</li>
+            <li>Jobs</li>
+            <li>Records</li>
+        </ul>
+    </div>
+    <div class="grid3">
+        <span>COMMUNITIES</span>
+        <ul>
+            <li>For&nbsp;Artists</li>
+            <li>Developers</li>
+            <li>Advertising</li>
+            <li>Investors</li>
+            <li>Vendors</li>
+        </ul>
+    </div>
+    <div class="grid4">
+        <span>USEFUL&nbsp;LINKS</span>
+        <ul>
+            <li>Support</li>
+            <li>Web&nbsp;Player</li>
+            <li>Contact&nbsp;Dulcet</li>
+        </ul>
+    </div>
+    <div class="grid5">
+        <div class="social-media-system">
+            <nav>
+            <ul>
+                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" title="Phone Number"><i class="fa-solid fa-phone"></i></a></li>
+                <li><a href="mailto:balahkharish@gmail.com?Subject=Regarding%20Query%20in%20this%20website" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+    
+</section>
+<footer class="footer">
+<h3>Copy &copy; 2020</h3>
+<p>All Rights Reserved</p>
+<p>Developed and Maintained by  <a href="#"><b>HARISH</b></a>
+</p>
+</footer>
+
+<script src="horizantal nav with drop-down.js"></script>
+</body>
+</html>
